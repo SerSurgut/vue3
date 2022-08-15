@@ -31,21 +31,9 @@ module.exports = {
   // Область. Она характеризует фрагмент кода, которую затронули изменения
   scopes: [
     { name: "components" },
-    { name: "tutorial" },
-    { name: "catalog" },
-    { name: "product" }
+    { name: "module" },
+    { name: "config" },
   ],
-
-  // Возможность задать спец ОБЛАСТЬ для определенного типа коммита (пример для 'fix')
-  /*
-  scopeOverrides: {
-    fix: [
-      {name: 'style'},
-      {name: 'e2eTest'},
-      {name: 'unitTest'}
-    ]
-  },
-  */
 
   // Поменяем дефолтные вопросы
   messages: {
@@ -63,7 +51,7 @@ module.exports = {
   },
 
   // Разрешим собственную ОБЛАСТЬ
-  allowCustomScopes: true,
+  allowCustomScopes: false,
 
   // Запрет на Breaking Changes
   allowBreakingChanges: false,
