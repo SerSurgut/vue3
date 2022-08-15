@@ -13,8 +13,10 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
     "@vitejs/plugin-vue": "^3.0.2",
     "cz-customizable": "^6.9.1",
+    "husky": "^8.0.1",
     "typescript": "^4.6.4",
     "vite": "^3.0.6",
     "vue-tsc": "^0.39.5"
@@ -25,6 +27,11 @@
     },
     "cz-customizable": {
       "config": "config/commitizen.cjs"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g './config/commitlint.js'"
     }
   }
 }

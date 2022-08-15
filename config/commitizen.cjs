@@ -29,11 +29,11 @@ module.exports = {
   ],
 
   // Область. Она характеризует фрагмент кода, которую затронули изменения
-  scopes: [
-    { name: "components" },
-    { name: "module" },
-    { name: "config" },
-  ],
+  // scopes: [
+  //   { name: "components" },
+  //   { name: "module" },
+  //   { name: "config" },
+  // ],
 
   // Поменяем дефолтные вопросы
   messages: {
@@ -42,19 +42,19 @@ module.exports = {
     body:
       'Напишите ПОДРОБНОЕ описание (опционально). Используйте "|" для новой строки:\n',
     breaking: "Список BREAKING CHANGES (опционально):\n",
-    footer:
-      "Место для мета данных (тикетов, ссылок и остального). Например: SECRETMRKT-700, SECRETMRKT-800:\n",
+    footer: "Место для мета данных (тикетов, ссылок и остального). Например: SECRETMRKT-700, SECRETMRKT-800:\n",
     confirmCommit: "Вас устраивает получившийся коммит?"
   },
 
-  // Разрешим собственную ОБЛАСТЬ
+  // Область
   allowCustomScopes: false,
+  skipEmptyScopes: true,
 
   // Запрет на Breaking Changes
   allowBreakingChanges: false,
 
   // Префикс для нижнего колонтитула
-  footerPrefix: "МЕТА ДАННЫЕ:",
+  footerPrefix: "Мета:",
 
   // limit subject length
   subjectLimit: 72
